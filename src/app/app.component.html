@@ -1,0 +1,22 @@
+<div class="body">
+    <div class="home" routerLink="/accueil">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+    </div>
+    <div class="title">
+        <h1>Culture Numérique</h1>
+        <h3>Antoine BUQUET</h3>
+        <div id="btn" routerLink="/tesseract">Cours sur</div>
+    </div>
+    <hr>
+    <h3 style="text-align: center">Réponses aux TDs</h3>
+    <div class="choice">
+        <div id="btn" routerLink="/fibonacci">Fibonacci</div>
+        <div id="btn" routerLink="/huffman">Huffman</div>
+        <div id="btn" routerLink="/expression-arithmetique">Expression arithmétique</div>
+        <div id="btn" routerLink="/minmax">MinMax</div>
+    </div>
+    <hr>
+    <div class="page">
+        <router-outlet></router-outlet>
+    </div>
+</div>
