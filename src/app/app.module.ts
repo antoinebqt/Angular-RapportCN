@@ -10,6 +10,7 @@ import { FibonacciComponent } from './Composants/fibonacci/fibonacci.component';
 import { HuffmanComponent } from './Composants/huffman/huffman.component';
 import { ExpressionArithmetiqueComponent } from './Composants/expression-arithmetique/expression-arithmetique.component';
 import { MinmaxComponent } from './Composants/minmax/minmax.component';
+import { CoursComponent } from './Composants/cours/cours.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MinmaxComponent } from './Composants/minmax/minmax.component';
     HuffmanComponent,
     ExpressionArithmetiqueComponent,
     MinmaxComponent,
+    CoursComponent,
   ],
   imports: [
     BrowserModule,

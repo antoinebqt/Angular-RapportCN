@@ -6,6 +6,7 @@ import { FibonacciComponent } from './Composants/fibonacci/fibonacci.component';
 import { HuffmanComponent } from './Composants/huffman/huffman.component';
 import { ExpressionArithmetiqueComponent } from './Composants/expression-arithmetique/expression-arithmetique.component';
 import { MinmaxComponent } from './Composants/minmax/minmax.component';
+import {CoursComponent } from './Composants/cours/cours.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'huffman', component: HuffmanComponent },
   { path: 'expression-arithmetique', component: ExpressionArithmetiqueComponent },
   { path: 'minmax', component: MinmaxComponent},
+  { path: 'cours', component: CoursComponent},
   { path: '**', redirectTo: '/accueil' },
 ];
 

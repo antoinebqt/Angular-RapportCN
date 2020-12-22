@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-fibonacci',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FibonacciComponent implements OnInit {
 
+  homeIcon = faHome;
   constructor() { }
 
   ngOnInit(): void {
