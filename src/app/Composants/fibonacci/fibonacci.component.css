@@ -26,6 +26,7 @@ h3 {
     font-weight: lighter;
     font-size: 2em;
     margin: 0px;
+    margin-top: 5px;
     color: whitesmoke;
     font-family: "Raleway";
     text-shadow: 4px 4px 4px #000;
@@ -96,4 +97,59 @@ fa-icon {
 
 .content {
     margin-left: 30px;
+}
+
+p {
+    font-size: 1.35em;
+    color: whitesmoke;
+    font-family: "Raleway";
+}
+
+.ita {
+    color: cyan;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #000;
+}
+
+img {
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+    width: 25%;
+    transition: 0.4s;
+}
+
+img:hover {
+    transform: scale(1.03);
+    border-color: cyan;
+    box-shadow: 5px 5px 10px #000;
+}
+
+.box {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    position: relative;
+    border: dashed 2px whitesmoke;
+    transition: 0.5s;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    ;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    border: solid 2px whitesmoke;
+    box-shadow: 0 0.5em 0.5em -0.4em #000;
+}
+
+.box:active {
+    opacity: 50%;
+    transition: 0s;
+}
+
+a {
+    text-decoration: none;
 }
