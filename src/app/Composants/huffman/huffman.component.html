@@ -1,1 +1,99 @@
-<p>huffman works!</p>
+<!-- MENU -->
+<div class="menu">
+    <div class="home" routerLink="/accueil">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+    </div>
+    <div id="btn" routerLink="/cours">Cours sur</div>
+</div>
+<hr>
+<h3 style="text-align: center">Réponses aux TDs</h3>
+<div class="choice">
+    <div id="btn" routerLink="/fibonacci">Fibonacci</div>
+    <div id="btn" routerLink="/huffman">Huffman</div>
+    <div id="btn" routerLink="/expression-arithmetique">Expression arithmétique</div>
+    <div id="btn" routerLink="/minmax">MinMax</div>
+</div>
+<hr>
+
+<!-- REPONSES -->
+<div class="content">
+    <br>
+    <h1>Algorithme de compression de Huffman</h1>
+    <br>
+    <h3>Question 1</h3>
+    <p>100 000 caractères = 100 000 octets. Sachant qu’un octet comporte 8 bits, il nous faut alors
+        <a class="ita">800 000 bits</a>
+    </p>
+    <br><br>
+    <h3>Question 2</h3>
+    <p>Pour les caractères A, B, C, D, E et F, seulement 3 bits suffisent pour les stocker car avec 3 bits, on à <a class="ita">2<sup>3</sup> = 8</a> possibilités de codage</p>
+    <br><br>
+    <h3>Question 3</h3>
+    <p>On sait que pour n bits, on peut coder x = 2<sup>n</sup> caractères différents donc pour x caractères différents, il nous faut <a class="ita">ln(x)/ln(2)</a> bits (en arrondissant à l’entier supérieur)
+    </p>
+    <br><br>
+    <h3>Question 4</h3>
+    <p>On a donc besoin de seulement 3*100 000 = 300 000 bits. Le gain G<sub>1</sub> est donc égal à <a class="ita">1 - (300 000 / 800 000) = 0,625 soit 62,5%</a>
+    </p>
+    <br><br>
+    <h3>Question 5</h3>
+    <p>Avec A codé sur un bit, B C et D codé sur 3, et enfin E et F codé sur 4, nous avons désormais besoin de : 45 000*1 + 41 000*3 + 14 000*4 = 224 000 bits. Le gain G<sub>2</sub> par rapport à la question 1 serait alors de <a class="ita">1 - (224 000 / 800 000) = 0,72 soit 72%</a></p>
+    <br><br>
+    <h3>Question 6</h3>
+    <p>Par rapport à la question 4, le gain G<sub>3</sub> est de <a class="ita">1 - (224 000 / 300 000) = 0,25 soit 25%</a></p>
+    <br><br>
+    <h3>Question 7</h3>
+    <p>Les lettres codées par 101100001101 sont <a class="ita">BCAAE</a></p>
+    <br><br>
+    <h3>Question 8</h3>
+    <p>Un arbre possible pour le mot <a class="ita">POLYTECH</a> :</p>
+    <a target="_blank" href="https://ibb.co/SKf1Xph"><img src="https://i.ibb.co/Q6DqFG2/2020-12-24-11h21-01.png" alt="1" style="width: 40%"></a>
+    <br><br>
+    <h3>Question 9</h3>
+    <p>L’arbre correspondant généré par le <a href="https://people.ok.ubc.ca/ylucet/DS/Huffman.html" class="ita" target="_blank">site</a> mis à notre disposition :</p>
+    <a target="_blank" href="https://ibb.co/rk6ZpyB"><img src="https://i.ibb.co/kK8hDcL/2020-12-24-11h28-30.png" alt="2020-12-24-11h28-30" style="width: 60%"></a>
+    <p>Le codage obtenu à partir de cet arbre est le suivant :</p>
+    <table>
+        <tr>
+            <td>E</td>
+            <td>A</td>
+            <td>N</td>
+            <td>O</td>
+            <td>P</td>
+            <td>B</td>
+            <td>G</td>
+            <td>U</td>
+            <td>V</td>
+            <td>C</td>
+            <td>I</td>
+            <td>H</td>
+            <td>T</td>
+            <td>L</td>
+            <td>Y</td>
+            <td>R</td>
+            <td>S</td>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>000</td>
+            <td>101</td>
+            <td>0010</td>
+            <td>0011</td>
+            <td>10000</td>
+            <td>10000</td>
+            <td>10010</td>
+            <td>10011</td>
+            <td>11000</td>
+            <td>11001</td>
+            <td>11010</td>
+            <td>11011</td>
+            <td>11100</td>
+            <td>11101</td>
+            <td>11110</td>
+            <td>11111</td>
+        </tr>
+    </table>
+    <br><br>
+    <h3>Question 10</h3>
+    <p>C’est un site très pratique, simple et intuitif qui explique de manière facile et concise le fonctionnement de la création d’un arbre pour le codage de Huffman</p>
+</div>

@@ -1,1 +1,114 @@
-<p>expression-arithmetique works!</p>
+<!-- MENU -->
+<div class="menu">
+    <div class="home" routerLink="/accueil">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+    </div>
+    <div id="btn" routerLink="/cours">Cours sur</div>
+</div>
+<hr>
+<h3 style="text-align: center">Réponses aux TDs</h3>
+<div class="choice">
+    <div id="btn" routerLink="/fibonacci">Fibonacci</div>
+    <div id="btn" routerLink="/huffman">Huffman</div>
+    <div id="btn" routerLink="/expression-arithmetique">Expression arithmétique</div>
+    <div id="btn" routerLink="/minmax">MinMax</div>
+</div>
+<hr>
+
+<!-- REPONSES -->
+<div class="content">
+    <br>
+    <h1>Évaluation d’une expression arithmétique infixe parenthésée</h1>
+    <br>
+    <h3>Question 1</h3>
+    <p>Parcours infixe (GRD) : <a class="ita">1 * 2 + 4 - 3</a></p>
+    <p>Parcours postfixe (GDR) : <a class="ita">1 2 4 + * 3 -</a></p>
+    <a target="_blank" href="https://imgbb.com/KWj1Hvt"><img src="https://i.ibb.co/0rjw3b0/2020-12-24-11h53-48.png" alt="1" style="width: 15%"></a>
+    <br><br>
+    <h3>Question 2</h3>
+    <p>L'arbre associé à l’expression arithmétique infixe parenthésée <a class="ita">(3-2*9/2+7)*((1-3+4-2*8*6)*(5-3))</a> :</p>
+    <a target="_blank" href="https://ibb.co/kctw0dK"><img src="https://i.ibb.co/DKZvkq4/2020-12-24-11h58-49.png" alt="2" style="width: 50%"></a>
+    <p>En postfixe, cela donne : <a class="ita">3 2 9 * 2 / - 7 + 1 3 - 4 + 2 8 * 6 * - 5 3 - * *</a></p>
+    <br><br>
+    <h3>Question 3</h3>
+    <a target="_blank" href="https://ibb.co/9pYB3Dc"><img src="https://i.ibb.co/7SyBNfj/2020-12-24-12h02-47.png" alt="3" style="width: 35%"></a>
+    <p>Avec le code du bouton <a class="ita">Calcul</a> associé :</p>
+    <a target="_blank" href="https://ibb.co/ngj1b73"><img src="https://i.ibb.co/QbMHfP8/2020-12-24-12h09-29.png" alt="4" style="width: 35%"></a>
+    <br><br>
+    <h3>Question 4</h3>
+    <p>Si on exécute cet algorithme à la main pour l'expression <a class="ita">2*(10+102)</a>, on a :
+    </p>
+    <table>
+        <tr>
+            <td>État</td>
+            <td>Expression</td>
+            <td>Pile</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>(</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>* (</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>( * (</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2 10</td>
+            <td>( * (</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2 10</td>
+            <td>+ ( * (</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>2 10 102</td>
+            <td>+ ( * (</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>2 10 102 +</td>
+            <td>* (</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>2 10 102 + *</td>
+            <td></td>
+        </tr>
+    </table>
+    <br><br>
+    <h3>Question 5</h3>
+    <p>Les instructions pour <a class="ita">empiler</a> et <a class="ita">dépiler</a> dans une pile en colonne 6 par exemple sont :</p>
+    <a target="_blank" href="https://imgbb.com/hWDgmP6"><img src="https://i.ibb.co/jMg8rcN/2020-12-24-13h46-35.png" alt="5" style="width: 25%"></a>
+    <br><br>
+    <h3>Question 6</h3>
+    <a target="_blank" href="https://ibb.co/Fzs7SD2"><img src="https://i.ibb.co/DQGKxRh/2020-12-24-13h49-28.png" alt="6" style="width: 45%"></a>
+    <p>Avec le code du bouton <a class="ita">Postfixe</a> suivant :</p>
+    <a target="_blank" href="https://ibb.co/fX4ZC1z"><img src="https://i.ibb.co/zmGCSnT/2020-12-24-13h58-33.png" alt="7" style="width: 45%"></a>
+    <br><br>
+    <h3>Question 7</h3>
+    <p><a target="_blank" class="ita" href="https://www.youtube.com/watch?v=WGHpxpR_a1U">Vidéo Youtube</a> du résultat obtenu</p>
+    <a target="_blank" href="https://www.youtube.com/watch?v=WGHpxpR_a1U"><img src="https://i.ibb.co/ZV6XknY/2020-12-24-16h59-15.png" alt="8" style="width: 45%"></a>
+    <p>Avec le code associé au bouton <a class="ita">Calcul</a> qui permet d’évaluer l’expression postfixe :</p>
+    <a target="_blank" href="https://ibb.co/tHKNK5B"><img src="https://i.ibb.co/yNPMPJ0/2020-12-24-16h54-18.png" alt="9" style="width: 25%"></a>
+    <h3 style="text-align: center;">Annexes</h3>
+    <hr>
+    <br>
+    <a target="_blank" href="https://mega.nz/file/4BhwRaxB#PD1yU0ZBRBa6gV4kVccjgP7lOfMTTAhsGVVSELTpBtA">
+        <div class="box">
+            <br>
+            <p>Telecharger le fichier Excel</p>
+            <br>
+        </div>
+    </a>
+
+</div>
