@@ -95,10 +95,6 @@ fa-icon {
     transition: 0s;
 }
 
-.content {
-    margin-left: 30px;
-}
-
 p {
     font-size: 1.35em;
     color: whitesmoke;
@@ -173,4 +169,9 @@ table:hover {
 td {
     border: 1px solid whitesmoke;
     width: 80px;
+}
+
+iframe {
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
 }

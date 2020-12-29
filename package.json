@@ -26,6 +26,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.14.0",
         "@fortawesome/free-regular-svg-icons": "^5.14.0",
         "@fortawesome/free-solid-svg-icons": "^5.14.0",
+        "ngx-page-scroll-core": "^7.0.3",
         "rxjs": "~6.5.5",
         "rxjs-compat": "^6.6.0",
         "tslib": "^2.0.0",

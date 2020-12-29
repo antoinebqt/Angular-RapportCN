@@ -11,6 +11,7 @@ export class ExpressionArithmetiqueComponent implements OnInit {
   homeIcon = faHome;
   constructor() { }
 
+
   ngOnInit(): void {
   }
 

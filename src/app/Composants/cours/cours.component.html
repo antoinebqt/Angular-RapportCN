@@ -1,1 +1,91 @@
-<p>cours works!</p>
+<!-- MENU -->
+<div class="home" routerLink="/accueil">
+    <fa-icon [icon]="homeIcon"></fa-icon>
+</div>
+<hr>
+<h3 style="text-align: center">Réponses aux TDs</h3>
+<div class="choice">
+    <div id="btn" routerLink="/fibonacci">Fibonacci</div>
+    <div id="btn" routerLink="/huffman">Huffman</div>
+    <div id="btn" routerLink="/expression-arithmetique">Expression arithmétique</div>
+    <div id="btn" routerLink="/minmax">MinMax</div>
+</div>
+<hr>
+
+<!-- REPONSES -->
+<div style="margin-left: 30px;">
+    <br><br>
+    <h3 style="margin-bottom: -15px; font-style: italic;">Tout ce qu'il faut savoir sur les</h3>
+    <h1 style="margin-top: 0px;">Notations infixe, préfixe et postfixe</h1>
+    <br>
+
+    <h2 style="text-decoration: underline;">Sommaire</h2>
+    <ul>
+        <li>
+            <a (click)="onClick('introduction')">Introduction</a>
+        </li>
+        <li>
+            <a (click)="onClick('infixe')">La notation infixe</a>
+        </li>
+        <li>
+            <a (click)="onClick('prefixe')">La notation préfixe</a>
+        </li>
+        <li>
+            <a (click)="onClick('postfixe')">La notation postfixe</a>
+        </li>
+        <li>
+            <a (click)="onClick('convertisseurs')">Convertisseurs</a>
+        </li>
+    </ul>
+
+    <br><br>
+
+    <div id="introduction">
+        <h2>Introduction</h2>
+        <p>Il existe différentes manière d'écrire une expression algébrique qui mène au même résultat, la plus courante et la plus utilisée dans le monde étant la notation infixe.<br>Cependant les expressions préfixées et postfixées ne sont pas plus difficile
+            et présentent même quelques avantages comparé à l'écriture infixe.</p>
+    </div>
+    <div id="infixe" class="droite">
+        <h2>La notation infixe</h2>
+        <p>Apparu il y a plus de 4 000 ans à l'époque paléo-Babylonienne, cette notation est répandue dans le monde entier depuis.<br> Il s'agit de la forme d'écriture d'une expressions où les opérateurs d'addition, de soustraction, de multiplication ou
+            de division se positionnent au milieu des deux opérandes (opérateur infixé).</p>
+        <a target="_blank" href="https://imgur.com/jsd11qo"><img src="https://i.imgur.com/jsd11qo.png" style="width: 100%;" /></a>
+        <p>On la lis de gauche à droite et on effectue le calcul avec l'opérande qui précède et celui qui suit l'opérateur. Cependant il existe des ordres de priorité dans les opérateurs et c'est pour cela que des parenthèses sont nécessaires pour indiquer
+            le calcul à faire en premier.</p>
+        <a target="_blank" href="https://imgur.com/LdyZs8v"><img src="https://i.imgur.com/LdyZs8v.png" style="width: 100%;" /></a>
+        <p>Les expressions infixées ont pour avantages d'être comprise par une très grande partie de la population et partout dans le monde.<br>L'utilisation de parenthèses est le principal défaut de cette notation. En effet avec des expressions plus importantes,
+            avec des parenthèses dans des parenthèses notamment, il est facile d'en oublier ou de tout décaler lorsque l'on recopie l'expression à la calculatrice par exemple.</p>
+    </div>
+    <div id="prefixe" class="gauche">
+        <h2>La notation préfixe</h2>
+        <p>Aussi connue sous le nom de la notation polonaise, de par la nationalité du mathématicien <a style="cursor:pointer" target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Jan_%C5%81ukasiewicz">Jan Łukasiewicz</a> qui la inventée en 1924
+            qui souhaitais se débarasser des parenthèses.<br>Les expressions écrites en préfixe se lisent de gauche à droite également mais la position de l'opérateur est cette fois-ci avant ses opérandes.</p>
+        <a target="_blank" href="https://i.imgur.com/89eSxP0.png"><img src="https://i.imgur.com/89eSxP0.png" style="width: 100%;" /></a>
+        <p>Le résultat est le même qu'avec l'écriture infixe, on effectue l'addition lorsque les deux opérandes (dans le cas d'une arité de 2) ont été évalué. En effet il y a souvent des cas où un opérande est lui même une expression, par exemple :</p>
+        <a target="_blank" href="https://imgur.com/RFVMTl0"><img src="https://i.imgur.com/RFVMTl0.png" style="width: 100%;" /></a>
+        <p>On notera ici que l'arité, soit le nombre d'opérandes que les opérateurs ont besoin, est connu et est de 2 (les opérateurs sont donc dit binaire).<br>En langage naturel, cela peut être lu de la manière suivante : "Le produit de l'addtion entre
+            3 et 5 avec 2".<br><br>Pour des expressions infixées plus complexes avec de nombreuses parenthèses, la notation préfixe permet la suppresion de toutes les parenthèses et rend alors l'expression beaucoup plus compacte. <br> Il s'agit cependant
+            de la notation la moins utilisée et notamment en algorithmique, nous verrons pourquoi dans le paragraphe relatif à
+            <a class="ita" style="cursor:pointer" (click)="onClick('postfixe')">la notation postfixe</a>.<br><br>Pour finir avec la notation préfixe, elle est utilisée avec des parenthèses dans certains langage de programmation tel que <a style="cursor:pointer"
+                target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Lisp">Lisp</a> ou <a style="cursor:pointer" target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Scheme">Scheme</a> pour permettre aux opérateurs d'avoir un nombre
+            d'opérandes variable.</p>
+    </div>
+    <div id="postfixe" class="droite">
+        <h2>La notation postfixe</h2>
+        <p>En réalité il s'agit de l'inverse de la notation préfixe, c'est pour cela qu'on la retrouve également sous le nom de notation polonaise inverse.<br><br>Cette variante à la notation polonaise à été crée en 1954 par le mathématicien américain
+            <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Arthur_Burks">Arthur Burks</a>, Don Warren et Jesse Wright. Quelques années plus tard c'est le philosophe et informaticien australien Charles Leonard
+            Hamblin qui les algorithmes associés à cette notation. Pour optimiser l'utilisation de la mémoire de lors des évaluation des expressions en postfixe, l'informaticien allemand <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Friedrich_L._Bauer">Friedrich Ludwig Bauer</a>            et le néerlandais <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Wybe Dijkstra</a> ont décider de l'utilisation d'une pile pour l'évaluation.<br><br>Comme son nom l'indique,
+            l'opérateur est donc après ses opérandes.</p>
+        <a target="_blank" href="https://imgur.com/wIBILP7"><img src="https://i.imgur.com/wIBILP7.png" style="width: 100%;" /></a>
+        <p>Toujours de droite à gauche, le calcul se fait lorsque l'on rencontre un opérateur en utilisant les deux derniers opérandes rencontrés.<br><br>Et c'est pour cette raison que en algorithmique, la notation en postfixe est beaucoup plus utilisée
+            que celle en préfixe. En préfix, il faut garder en mémoire chaque opérateur tant que l'on ne sait pas si ses opérandes ont tous été évalués car les opérandes peuvent contenir d'autres opérateurs et ainsi de suite, il faut donc une pile capable
+            de gérer cela.<br>Les expressions postfixée rendent l'évaluation beaucoup plus facile car les opérateurs se trouvent après les opérandes. Autrement la notation postfixe dispose des mêmes avantages que la notation préfixe, à savoir la suppresion
+            des parenthèses et une expression plus compacte.</p>
+        <a target="_blank" href="https://imgur.com/ITYW1c8"><img src="https://i.imgur.com/ITYW1c8.png" style="width: 100%;" /></a>
+        <p>En langage naturel, cela donne : "Avec 3 et 5, faire une addition, avec cette somme et 2, faire une multiplication".<br><br>La notation postfixe est utilisé dans certain domaine tel que la programmation (Forth, RPL, PostScript, etc.), les vols
+            spatiaux ou encore dans les consoles d'éclairage.</p>
+    </div>
+    <div id="convertisseurs" class="gauche">
+        <h2>Convertisseurs</h2>
+    </div>
+</div>

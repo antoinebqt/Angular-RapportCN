@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { ViewportScroller } from '@angular/common';
+
 
 @Component({
   selector: 'app-cours',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  homeIcon = faHome;
+  constructor(private viewportScroller: ViewportScroller) { 
   }
+
+  public onClick(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
+}
+
+  ngOnInit(): void {}
 
 }
