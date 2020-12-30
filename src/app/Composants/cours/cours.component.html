@@ -36,6 +36,9 @@
         <li>
             <a (click)="onClick('convertisseurs')">Convertisseurs</a>
         </li>
+        <li>
+            <a (click)="onClick('annexes')">Annexes</a>
+        </li>
     </ul>
 
     <br><br>
@@ -87,5 +90,112 @@
     </div>
     <div id="convertisseurs" class="gauche">
         <h2>Convertisseurs</h2>
+        <p>Pour passer d'une notation à l'autre, il existe des algorithmes (disponible en <a class="ita" style="cursor: pointer;" (click)="onClick('annexes')">annexes</a>) plus ou moins complexes.<br><br>Voici ci-dessous quelques convertisseurs pour des
+            expressions simples :
+        </p>
+        <div class="convertisseurs">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Infixe à Préfixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression infixe</td>
+                        <td>Expression préfixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="infix_InPr" type="text" name="infix_InPr"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_InPr }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitInPr()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Infixe à Postfixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression infixe</td>
+                        <td>Expression postfixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="infix_InPo" type="text" name="infix_InPo"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_InPo }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitInPo()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Postfixe à Infixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression postfixe</td>
+                        <td>Expression infixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="postfix_PoIn" type="text" name="postfix_PoIn"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PoIn }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère<br>- Donne un résultat sans parenthèses</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitPoIn()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Postfixe à Préfixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression postfixe</td>
+                        <td>Expression préfixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="postfix_PoPr" type="text" name="postfix_PoPr"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PoPr }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère<br>- Donne un résultat sans parenthèses</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitPoPr()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
+    <h3 id="annexes" style="text-align: center;">Annexes</h3>
+    <hr>
 </div>
