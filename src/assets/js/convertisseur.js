@@ -1,4 +1,55 @@
-//CONVERTISSEUR INFIXE POSTFIXE
+//CONVERTISSEUR INFIXE PREFIXE
+function infixToPrefix(infix) {
+    var temp1 = infix.replace(/\(/g, "x");
+    var temp2 = temp1.replace(/\)/g, "(");
+    var temp3 = temp2.replace(/x/g, ")");
+
+
+    var reversedString = temp3.split("").reverse().join("");
+    var reversedPrefix = infixToPostfix(tokenize(reversedString));
+    var prefix = reversedPrefix.split("").reverse().join("");
+    return prefix;
+}
+
+//CONVERTISSEUR POSTFIX PREFIX
+function postfixToPrefix(postfix) {
+    var infix = postfixToInfix(postfix);
+    var prefix = infixToPrefix(infix);
+    return prefix;
+}
+
+//CONVERTISSEUR PREFIXE INFIXE créé à partir du convertisseur postfix/infix
+function prefixToInfix(prefix) {
+    var stackArr = new Array();
+
+    prefix = "stop ".concat(prefix);
+    prefix = prefix.split(' ');
+
+    for (var i = prefix.length; i > 0; i--) {
+        if (isOperand(prefix[i])) {
+            push_stack(stackArr, prefix[i]);
+        } else {
+            var temp = topStack(stackArr);
+            pop_stack(stackArr);
+            var pushVal = "(" + temp + prefix[i] + topStack(stackArr) + ")";
+            pop_stack(stackArr);
+            push_stack(stackArr, pushVal);
+        }
+    }
+    var infixString = topStack(stackArr).toString();
+    return infixString.split("").join(" ");
+}
+
+//CONVERTISSEUR PREFIXE POSTFIXE
+function prefixToPostfix(prefix) {
+    var infix = prefixToInfix(prefix);
+    var postfix = infixToPostfix(tokenize(infix));
+    return postfix;
+}
+
+
+//CONVERTISSEUR INFIXE POSTFIXE créé par Derek Leung
+//https://jsfiddle.net/DerekL/rm9feo32/
 function infixToPostfix(infix) {
     const presedences = ["-", "+", "*", "/"];
 
@@ -60,20 +111,8 @@ function tokenize(exp) {
         .map((token, i) => /^\d$/.test(token) ? +token : token);
 }
 
-//CONVERTISSEUR INFIXE PREFIXE
-function infixToPrefix(infix) {
-    var temp1 = infix.replace(/\(/g, "x");
-    var temp2 = temp1.replace(/\)/g, "(");
-    var temp3 = temp2.replace(/x/g, ")");
-
-
-    var reversedString = temp3.split("").reverse().join("");
-    var reversedPrefix = infixToPostfix(tokenize(reversedString));
-    var prefix = reversedPrefix.split("").reverse().join("");
-    return prefix;
-}
-
-//CONVERTISSEUR POSTFIX INFIXE
+//CONVERTISSEUR POSTFIX INFIXE créé par java2s.com
+//http://www.java2s.com/Code/JavaScript/Development/PostfixtoInfixConversion.htm
 function push_stack(stackArr, ele) {
     stackArr[stackArr.length] = ele;
 }
@@ -106,18 +145,11 @@ function postfixToInfix(postfix) {
         } else {
             var temp = topStack(stackArr);
             pop_stack(stackArr);
-            var pushVal = topStack(stackArr) + postfix[i] + temp;
+            var pushVal = "(" + topStack(stackArr) + postfix[i] + temp + ")";
             pop_stack(stackArr);
             push_stack(stackArr, pushVal);
         }
     }
     var infixString = topStack(stackArr).toString();
     return infixString.split("").join(" ");
-}
-
-//CONVERTISSEUR POSTFIX PREFIX
-function postfixToPrefix(postfix) {
-    var infix = postfixToInfix(postfix);
-    var prefix = infixToPrefix(infix);
-    return prefix;
 }

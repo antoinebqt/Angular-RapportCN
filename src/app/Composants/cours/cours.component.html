@@ -45,15 +45,15 @@
 
     <div id="introduction">
         <h2>Introduction</h2>
-        <p>Il existe différentes manière d'écrire une expression algébrique qui mène au même résultat, la plus courante et la plus utilisée dans le monde étant la notation infixe.<br>Cependant les expressions préfixées et postfixées ne sont pas plus difficile
-            et présentent même quelques avantages comparé à l'écriture infixe.</p>
+        <p>Il existe différentes manières d'écrire une expression algébrique qui mène au même résultat, la plus courante et la plus utilisée dans le monde étant la notation infixe.<br>Cependant les expressions préfixées et postfixées ne sont pas plus difficile
+            et présentent même quelques avantages comparés à l'écriture infixe.</p>
     </div>
     <div id="infixe" class="droite">
         <h2>La notation infixe</h2>
-        <p>Apparu il y a plus de 4 000 ans à l'époque paléo-Babylonienne, cette notation est répandue dans le monde entier depuis.<br> Il s'agit de la forme d'écriture d'une expressions où les opérateurs d'addition, de soustraction, de multiplication ou
-            de division se positionnent au milieu des deux opérandes (opérateur infixé).</p>
+        <p>Apparu il y a plus de 4 000 ans à l'époque paléo-Babylonienne, cette notation est répandue dans le monde entier depuis.<br> Il s'agit de la forme d'écriture d'une expression où les opérateurs d'addition, de soustraction, de multiplication ou de
+            division se positionnent au milieu des deux opérandes (opérateur infixé).</p>
         <a target="_blank" href="https://imgur.com/jsd11qo"><img src="https://i.imgur.com/jsd11qo.png" style="width: 100%;" /></a>
-        <p>On la lis de gauche à droite et on effectue le calcul avec l'opérande qui précède et celui qui suit l'opérateur. Cependant il existe des ordres de priorité dans les opérateurs et c'est pour cela que des parenthèses sont nécessaires pour indiquer
+        <p>On la lit de gauche à droite et on effectue le calcul avec l'opérande qui précède et celui qui suit l'opérateur. Cependant, il existe des ordres de priorité dans les opérateurs et c'est pour cela que des parenthèses sont nécessaires pour indiquer
             le calcul à faire en premier.</p>
         <a target="_blank" href="https://imgur.com/LdyZs8v"><img src="https://i.imgur.com/LdyZs8v.png" style="width: 100%;" /></a>
         <p>Les expressions infixées ont pour avantages d'être comprise par une très grande partie de la population et partout dans le monde.<br>L'utilisation de parenthèses est le principal défaut de cette notation. En effet avec des expressions plus importantes,
@@ -61,37 +61,37 @@
     </div>
     <div id="prefixe" class="gauche">
         <h2>La notation préfixe</h2>
-        <p>Aussi connue sous le nom de la notation polonaise, de par la nationalité du mathématicien <a style="cursor:pointer" target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Jan_%C5%81ukasiewicz">Jan Łukasiewicz</a> qui la inventée en 1924
-            qui souhaitais se débarasser des parenthèses.<br>Les expressions écrites en préfixe se lisent de gauche à droite également mais la position de l'opérateur est cette fois-ci avant ses opérandes.</p>
-        <a target="_blank" href="https://i.imgur.com/89eSxP0.png"><img src="https://i.imgur.com/89eSxP0.png" style="width: 100%;" /></a>
-        <p>Le résultat est le même qu'avec l'écriture infixe, on effectue l'addition lorsque les deux opérandes (dans le cas d'une arité de 2) ont été évalué. En effet il y a souvent des cas où un opérande est lui même une expression, par exemple :</p>
+        <p>Aussi connue sous le nom de la notation polonaise, de par la nationalité du mathématicien <a style="cursor:pointer" target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Jan_%C5%81ukasiewicz">Jan Łukasiewicz</a> qui l'a inventée en 1924
+            qui souhaitait se débarrasser des parenthèses.<br>Les expressions écrites en préfixe se lisent de gauche à droite également, mais la position de l'opérateur est cette fois-ci avant ses opérandes.</p>
+        <a target="_blank" href="https://i.imgur.com/89eSxP0"><img src="https://i.imgur.com/89eSxP0.png" style="width: 100%;" /></a>
+        <p>Le résultat est le même qu'avec l'écriture infixe, on effectue l'addition lorsque les deux opérandes (dans le cas d'une arité de 2) ont été évalués. En effet il y a souvent des cas où un opérande est lui-même une expression, par exemple :</p>
         <a target="_blank" href="https://imgur.com/RFVMTl0"><img src="https://i.imgur.com/RFVMTl0.png" style="width: 100%;" /></a>
-        <p>On notera ici que l'arité, soit le nombre d'opérandes que les opérateurs ont besoin, est connu et est de 2 (les opérateurs sont donc dit binaire).<br>En langage naturel, cela peut être lu de la manière suivante : "Le produit de l'addtion entre
-            3 et 5 avec 2".<br><br>Pour des expressions infixées plus complexes avec de nombreuses parenthèses, la notation préfixe permet la suppresion de toutes les parenthèses et rend alors l'expression beaucoup plus compacte. <br> Il s'agit cependant
+        <p>On notera ici que l'arité, soit le nombre d'opérandes que les opérateurs ont besoin, est connu et est de 2 (les opérateurs sont donc dits binaire).<br>En langage naturel, cela peut être lu de la manière suivante : "Le produit de l'addition entre
+            3 et 5 avec 2".<br><br>Pour des expressions infixées plus complexes avec de nombreuses parenthèses, la notation préfixe permet la suppression de toutes les parenthèses et rend alors l'expression beaucoup plus compacte. <br> Il s'agit cependant
             de la notation la moins utilisée et notamment en algorithmique, nous verrons pourquoi dans le paragraphe relatif à
-            <a class="ita" style="cursor:pointer" (click)="onClick('postfixe')">la notation postfixe</a>.<br><br>Pour finir avec la notation préfixe, elle est utilisée avec des parenthèses dans certains langage de programmation tel que <a style="cursor:pointer"
+            <a class="ita" style="cursor:pointer" (click)="onClick('postfixe')">la notation postfixe</a>.<br><br>Pour finir avec la notation préfixe, elle est utilisée avec des parenthèses dans certains langages de programmation tels que <a style="cursor:pointer"
                 target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Lisp">Lisp</a> ou <a style="cursor:pointer" target="_blank" class="ita" href="https://fr.wikipedia.org/wiki/Scheme">Scheme</a> pour permettre aux opérateurs d'avoir un nombre
             d'opérandes variable.</p>
     </div>
     <div id="postfixe" class="droite">
         <h2>La notation postfixe</h2>
-        <p>En réalité il s'agit de l'inverse de la notation préfixe, c'est pour cela qu'on la retrouve également sous le nom de notation polonaise inverse.<br><br>Cette variante à la notation polonaise à été crée en 1954 par le mathématicien américain
-            <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Arthur_Burks">Arthur Burks</a>, Don Warren et Jesse Wright. Quelques années plus tard c'est le philosophe et informaticien australien Charles Leonard
-            Hamblin qui les algorithmes associés à cette notation. Pour optimiser l'utilisation de la mémoire de lors des évaluation des expressions en postfixe, l'informaticien allemand <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Friedrich_L._Bauer">Friedrich Ludwig Bauer</a>            et le néerlandais <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Wybe Dijkstra</a> ont décider de l'utilisation d'une pile pour l'évaluation.<br><br>Comme son nom l'indique,
+        <p>En réalité, il s'agit de l'inverse de la notation préfixe, c'est pour cela qu'on la retrouve également sous le nom de notation polonaise inverse.<br><br>Cette variante à la notation polonaise à été crée en 1954 par le mathématicien américain
+            <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Arthur_Burks">Arthur Burks</a>, Don Warren et Jesse Wright. Quelques années plus tard, c'est le philosophe et informaticien australien Charles Leonard
+            Hamblin qui les algorithmes associés à cette notation. Pour optimiser l'utilisation de la mémoire lors des évaluations des expressions en postfixe, l'informaticien allemand <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Friedrich_L._Bauer">Friedrich Ludwig Bauer</a>            et le néerlandais <a style="cursor:pointer" target="_blank" class="ita" href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Wybe Dijkstra</a> ont décider de l'utilisation d'une pile pour l'évaluation.<br><br>Comme son nom l'indique,
             l'opérateur est donc après ses opérandes.</p>
         <a target="_blank" href="https://imgur.com/wIBILP7"><img src="https://i.imgur.com/wIBILP7.png" style="width: 100%;" /></a>
-        <p>Toujours de droite à gauche, le calcul se fait lorsque l'on rencontre un opérateur en utilisant les deux derniers opérandes rencontrés.<br><br>Et c'est pour cette raison que en algorithmique, la notation en postfixe est beaucoup plus utilisée
-            que celle en préfixe. En préfix, il faut garder en mémoire chaque opérateur tant que l'on ne sait pas si ses opérandes ont tous été évalués car les opérandes peuvent contenir d'autres opérateurs et ainsi de suite, il faut donc une pile capable
-            de gérer cela.<br>Les expressions postfixée rendent l'évaluation beaucoup plus facile car les opérateurs se trouvent après les opérandes. Autrement la notation postfixe dispose des mêmes avantages que la notation préfixe, à savoir la suppresion
+        <p>Toujours de droite à gauche, le calcul se fait lorsque l'on rencontre un opérateur en utilisant les deux derniers opérandes rencontrés.<br><br>Et c'est pour cette raison qu'en algorithmique, la notation en postfixe est beaucoup plus utilisée que
+            celle en préfixe. En préfixe, il faut garder en mémoire chaque opérateur tant que l'on ne sait pas si ses opérandes ont tous été évalués car les opérandes peuvent contenir d'autres opérateurs et ainsi de suite, il faut donc une pile capable
+            de gérer cela.<br>Les expressions postfixées rendent l'évaluation beaucoup plus facile car les opérateurs se trouvent après les opérandes. Autrement la notation postfixe dispose des mêmes avantages que la notation préfixe, à savoir la suppression
             des parenthèses et une expression plus compacte.</p>
         <a target="_blank" href="https://imgur.com/ITYW1c8"><img src="https://i.imgur.com/ITYW1c8.png" style="width: 100%;" /></a>
-        <p>En langage naturel, cela donne : "Avec 3 et 5, faire une addition, avec cette somme et 2, faire une multiplication".<br><br>La notation postfixe est utilisé dans certain domaine tel que la programmation (Forth, RPL, PostScript, etc.), les vols
+        <p>En langage naturel, cela donne : "Avec 3 et 5, faire une addition, avec cette somme et 2, faire une multiplication".<br><br>La notation postfixe est utilisé dans certains domaines tels que la programmation (Forth, RPL, PostScript, etc.), les vols
             spatiaux ou encore dans les consoles d'éclairage.</p>
     </div>
     <div id="convertisseurs" class="gauche">
         <h2>Convertisseurs</h2>
-        <p>Pour passer d'une notation à l'autre, il existe des algorithmes (disponible en <a class="ita" style="cursor: pointer;" (click)="onClick('annexes')">annexes</a>) plus ou moins complexes.<br><br>Voici ci-dessous quelques convertisseurs pour des
-            expressions simples :
+        <p>Pour passer d'une notation à l'autre, il existe des algorithmes (disponible en <a class="ita" style="cursor: pointer;" (click)="onClick('annexes')">annexes</a>) plus ou moins complexes.<br><br>Voici ci-dessous quelques convertisseurs codés en
+            JavaScript pour des expressions simples :
         </p>
         <div class="convertisseurs">
             <table>
@@ -106,7 +106,7 @@
                         <td>Expression préfixe</td>
                     </tr>
                     <tr>
-                        <td><input [(ngModel)]="infix_InPr" type="text" name="infix_InPr"></td>
+                        <td><input [(ngModel)]="infix_InPr" type="text" name="infix_InPr" placeholder="Exemple : (3 + 5) * 2"></td>
                         <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_InPr }}</textarea></td>
                     </tr>
                 </tbody>
@@ -131,7 +131,7 @@
                         <td>Expression postfixe</td>
                     </tr>
                     <tr>
-                        <td><input [(ngModel)]="infix_InPo" type="text" name="infix_InPo"></td>
+                        <td><input [(ngModel)]="infix_InPo" type="text" name="infix_InPo" placeholder="Exemple : (3 + 5) * 2"></td>
                         <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_InPo }}</textarea></td>
                     </tr>
                 </tbody>
@@ -156,13 +156,13 @@
                         <td>Expression infixe</td>
                     </tr>
                     <tr>
-                        <td><input [(ngModel)]="postfix_PoIn" type="text" name="postfix_PoIn"></td>
+                        <td><input [(ngModel)]="postfix_PoIn" type="text" name="postfix_PoIn" placeholder="Exemple : 3 5 + 2 *"></td>
                         <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PoIn }}</textarea></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère<br>- Donne un résultat sans parenthèses</td>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
                     </tr>
                     <tr>
                         <th colspan="2"><button class="submit" (click)="onSubmitPoIn()">Convertir</button></th>
@@ -181,16 +181,66 @@
                         <td>Expression préfixe</td>
                     </tr>
                     <tr>
-                        <td><input [(ngModel)]="postfix_PoPr" type="text" name="postfix_PoPr"></td>
+                        <td><input [(ngModel)]="postfix_PoPr" type="text" name="postfix_PoPr" placeholder="Exemple : 3 5 + 2 *"></td>
                         <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PoPr }}</textarea></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère<br>- Donne un résultat sans parenthèses</td>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
                     </tr>
                     <tr>
                         <th colspan="2"><button class="submit" (click)="onSubmitPoPr()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Préfixe à Infixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression préfixe</td>
+                        <td>Expression infixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="prefix_PrIn" type="text" name="prefix_PrIn" placeholder="Exemple : * + 3 5 2"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PrIn }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitPrIn()">Convertir</button></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Conversion Préfixe à Postfixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Expression préfixe</td>
+                        <td>Expression postfixe</td>
+                    </tr>
+                    <tr>
+                        <td><input [(ngModel)]="prefix_PrPo" type="text" name="prefix_PrPo" placeholder="Exemple : * + 3 5 2"></td>
+                        <td><textarea disabled placeholder="Résultat après conversion">{{ resultat_PrPo }}</textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="font-size: 0.7em;">- Mettre un espace entre chaque caractère</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button class="submit" (click)="onSubmitPrPo()">Convertir</button></th>
                     </tr>
                 </tfoot>
             </table>
@@ -198,4 +248,14 @@
     </div>
     <h3 id="annexes" style="text-align: center;">Annexes</h3>
     <hr>
+    <div class="annexes">
+        <a target="_blank" href="https://imgur.com/Xb0zr4P"><img src="https://i.imgur.com/Xb0zr4P.png" style="width: 100%; margin-top: 30px;" /></a>
+        <h3>Annexe 1</h3>
+        <a target="_blank" href="https://imgur.com/MBTOIAh"><img src="https://i.imgur.com/MBTOIAh.png" style="width: 100%; margin-top: 30px;" /></a>
+        <h3>Annexe 2</h3>
+        <a target="_blank" href="https://imgur.com/VDWXEsY"><img src="https://i.imgur.com/VDWXEsY.png" style="width: 100%; margin-top: 30px;" /></a>
+        <h3>Annexe 3</h3>
+        <a target="_blank" href="https://imgur.com/6iyZZwd"><img src="https://i.imgur.com/6iyZZwd.png" style="width: 100%; margin-top: 30px;" /></a>
+        <h3>Annexe 4</h3>
+    </div>
 </div>

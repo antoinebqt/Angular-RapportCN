@@ -120,32 +120,6 @@ img:hover {
     box-shadow: 5px 5px 10px #000;
 }
 
-.box {
-    display: flex;
-    width: 400px;
-    height: 100px;
-    position: relative;
-    border: dashed 2px whitesmoke;
-    transition: 0.5s;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    ;
-}
-
-.box:hover {
-    background: rgba(255, 255, 255, 0.5);
-    transform: scale(1.1);
-    border: solid 2px whitesmoke;
-    box-shadow: 0 0.5em 0.5em -0.4em #000;
-}
-
-.box:active {
-    opacity: 50%;
-    transition: 0s;
-}
-
 a {
     text-decoration: none;
 }

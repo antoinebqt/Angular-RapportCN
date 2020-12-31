@@ -7,6 +7,8 @@ declare const infixToPostfix: any;
 declare const tokenize: any;
 declare const postfixToInfix: any;
 declare const postfixToPrefix: any;
+declare const prefixToInfix: any;
+declare const prefixToPostfix: any;
 
 
 @Component({
@@ -29,6 +31,12 @@ export class CoursComponent implements OnInit {
 
   postfix_PoPr:string;
   resultat_PoPr:string;
+
+  prefix_PrIn:string;
+  resultat_PrIn:string;
+
+  prefix_PrPo:string;
+  resultat_PrPo:string;
 
   constructor(private viewportScroller: ViewportScroller) { 
   }
@@ -56,6 +64,14 @@ export class CoursComponent implements OnInit {
 
   onSubmitPoPr(){
     this.resultat_PoPr = postfixToPrefix(this.postfix_PoPr);
+  }
+
+  onSubmitPrIn(){
+    this.resultat_PrIn = prefixToInfix(this.prefix_PrIn);
+  }
+
+  onSubmitPrPo(){
+    this.resultat_PrPo = prefixToPostfix(this.prefix_PrPo);
   }
 
 }
