@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-minmax',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinmaxComponent implements OnInit {
 
+  homeIcon = faHome;
   constructor() { }
 
   ngOnInit(): void {

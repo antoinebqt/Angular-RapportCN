@@ -1,1 +1,69 @@
-<p>minmax works!</p>
+<!-- MENU -->
+<div class="menu">
+    <div class="home" routerLink="/accueil">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+    </div>
+    <div id="btn" routerLink="/cours">Notations infixe, préfixe et postfixe</div>
+</div>
+<hr>
+<h3 style="text-align: center">Réponses aux TDs</h3>
+<div class="choice">
+    <div id="btn" routerLink="/fibonacci">Fibonacci</div>
+    <div id="btn" routerLink="/huffman">Huffman</div>
+    <div id="btn" routerLink="/expression-arithmetique">Expression arithmétique</div>
+    <div id="btn" routerLink="/minmax">MinMax</div>
+</div>
+<hr>
+
+<!-- REPONSES -->
+<div style="margin-left: 30px;">
+    <br>
+    <h1>Algorithme MinMax et jeu du Morpion</h1>
+    <br>
+    <h3>Question 1</h3>
+    <p>Code de la fonction <a class="ita">Evaluation</a> que j'utiliserais pour l'algorithme MinMax :</p>
+    <a target="_blank" href="https://i.imgur.com/53HejPS.png"><img src="https://i.imgur.com/53HejPS.png" style="width: 25%;" /></a>
+    <br>
+    <p>Voici également le code de la fonction <a class="ita">End_Game</a> :</p>
+    <a target="_blank" href="https://i.imgur.com/sbJ19W8.png"><img src="https://i.imgur.com/sbJ19W8.png" style="width: 25%;" /></a>
+    <br><br>
+    <h3>Question 2</h3>
+    <p>Sans calculer le meilleur coup avec la fonction <a class="ita">Calc_Min</a> et <a class="ita">Calc_Max</a>, il est encore possible de gagner contre l'ordinateur comme le montre l'exemple ci-dessous :</p>
+    <a target="_blank" href="https://i.imgur.com/P3F7gpv.png"><img src="https://i.imgur.com/P3F7gpv.png" style="width: 20%;" /></a>
+    <br><br>
+    <a target="_blank" href="https://i.imgur.com/tBrTuLV.png"><img src="https://i.imgur.com/tBrTuLV.png" style="width: 20%;" /></a>
+    <br><br>
+    <a target="_blank" href="https://i.imgur.com/XU1VeuM.png"><img src="https://i.imgur.com/XU1VeuM.png" style="width: 20%;" /></a>
+    <br><br>
+    <a target="_blank" href="https://i.imgur.com/puUCIxM.png"><img src="https://i.imgur.com/puUCIxM.png" style="width: 20%;" /></a>
+    <br>
+    <p>Ici l'algorithme place une croix de manière à maximiser la valeur de l'évaluation dans la situation actuelle mais il ne prend pas en compte les conséquences de son coup qui permet au joueur de gagner dans certains cas.</p>
+    <br><br>
+    <h3>Question 3</h3>
+    <p>En modifiant la fonction <a class="ita">Calc_AI</a> pour y intégrer l'appel à la fonction <a class="ita">Calc_Min</a>, l'ordinateur devient beaucoup plus intelligent dans sa façon de jouer et même après je n'ai pas réussi à le vaincre.
+    </p>
+    <br><br>
+    <h3>Question 4</h3>
+    <p>Code de la fontion <a class="ita">Calc_Max</a> :</p>
+    <a target="_blank" href="https://i.imgur.com/REaV7Tw.png"><img src="https://i.imgur.com/REaV7Tw.png" style="width: 25%;" /></a>
+    <br>
+    <p>Avec une telle capacité de prévision, il est devenu vraiment impossible de gagner contre l'ordinateur.</p>
+    <br><br>
+    <h3>Question 5</h3>
+    <p>Le temps d'exécution avant de trouver le meilleur coup, par exemple si c'est l'IA qui commence, le nombre de fois où l'ordinateur va calculer la situation a l'aide de la fonction <a class="ita">Evaluation</a> va considérablement augmenter en fonction
+        de la profondeur souhaitée :<br><br> - Pour une profondeur de x = 0 : 9 possibilités à calculer<br> - Pour une profondeur de x = 1 : 72 possibilités à calculer<br> - Pour une profondeur de x = 2 : 504 possibilités à calculer<br> - Pour une profondeur
+        de x = 3 : 3 024 possibilités à calculer<br> - Pour une profondeur de x = 4 : 15 120 possibilités à calculer<br><br>La formule étant : <a class="ita">Π(9-n)</a> avec n allant de 0 à x.
+    </p>
+    <br><br>
+    <h3 style="text-align: center; ">Annexes</h3>
+    <hr>
+    <br>
+    <a target="_blank " href="https://mega.nz/file/cUQDnS4Q#plt4SNqPGPuO5Ucj4kZ0Eb0-4gtQAMXfp9NHWDekiLk">
+        <div class="box ">
+            <br>
+            <p>Telecharger le fichier Excel</p>
+            <br>
+        </div>
+    </a>
+
+</div>
